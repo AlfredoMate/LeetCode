@@ -11,7 +11,7 @@ public class Solution {
         int current_consecutive = 0;
         for (int num : my_set) {
             if (!my_set.contains(num - 1)) {
-                //nums[i] is the first number of a sequence
+                //num is the first number of a sequence
                 current_consecutive = 1;
                 int current_number = num;
                 while(my_set.contains(current_number + 1)) {
