@@ -1,22 +1,26 @@
-**LeetCode Problem 128**
+## Longest Consecutive Sequence (128)
 
-Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
-
-You must write an algorithm that runs in O(n) time.
-
-Example 1:
-
-Input: nums = [100,4,200,1,3,2]
-Output: 4
-Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
-Example 2:
-
-Input: nums = [0,3,7,2,5,8,4,6,0,1]
-Output: 9
-Example 3:
-
-Input: nums = [1,0,1,2]
-Output: 3
+Link: https://leetcode.com/problems/longest-consecutive-sequence/description/
 
 -------------------------
+### Difficulty : Medium
 
+### Approach
+- Create a Set with all elements of the array.
+- Iterate over each element of the set
+- If previous number doesn't exist, it means it is the first number in a sequence.
+e.g. Current number is 7, but 6 doesn't exist in the set, 7 is the first element in a sequence.
+  - Increment current sequence length until next number doesn't exist. That means we found the end of the sequence.
+  - If it is the longest cosecutive secuence so far, update maximum consecutive secuence length.
+  
+## Time complexity
+
+O(n). We travel through elements of the array once for converting it to a Set and another one to find the maximum sequence. O(n + n) = O(n)
+
+The while inside the loop still maintains O(n) as we are only touching elements once. For loop for first sequence elements and while loop for non-first secuence elements.
+
+Important: The strategy of sorting the array before finding the sequence is not valid as the time complexity of the sorting logic is > O(n)
+
+## Space complexity
+
+O(n)
