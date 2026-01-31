@@ -1,1 +1,1 @@
-This is the first commit
+Repo to solve LeetCode interesting algorithm problems.
