@@ -3,7 +3,7 @@
 Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 
 -------------------------
-### Difficulty : Easy
+### Difficulty : Medium
 
 ### Approach
 
