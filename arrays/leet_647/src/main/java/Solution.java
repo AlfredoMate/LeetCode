@@ -8,36 +8,27 @@ public class Solution {
      */
     public int countSubstrings(String s) {
         int total_substrings = 0;
-        int start_index = 0;
-        int end_index = 0;
+
 
         for (int i = 0; i < s.length(); i++) {
             //Case with string having even number of letters
-            start_index = end_index = i;
-            while (start_index >= 0 && end_index < s.length()) {
-                if (s.charAt(start_index) == s.charAt(end_index)) {
-                    total_substrings++;
-                } else {
-                    break;
-                }
-                start_index--;
-                end_index++;
-            }
+            total_substrings += expandFromCenter(s, i, i);
             //Case with string having odd number of letters
-            start_index = i;
-            end_index = i + 1;
-            while (start_index >= 0 && end_index < s.length()) {
-                if (s.charAt(start_index) == s.charAt(end_index)) {
-                    total_substrings++;
-                } else {
-                    break;
-                }
-                start_index--;
-                end_index++;
-            }
+            total_substrings += total_substrings + expandFromCenter(s, i, i + 1);
+
         }
 
         return total_substrings;
+    }
+
+    private int expandFromCenter (String s, int start_index, int end_index) {
+        int palindromes_from_center = 0;
+        while (start_index >= 0 && end_index < s.length() && s.charAt(start_index) == s.charAt(end_index)) {
+            palindromes_from_center++;
+            start_index--;
+            end_index++;
+        }
+        return palindromes_from_center;
     }
 
     /**
