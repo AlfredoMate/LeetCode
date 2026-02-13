@@ -2,7 +2,7 @@
 public class Solution {
 
     /**
-     *
+     * O(n) solution
      * @param height
      * @return
      */
