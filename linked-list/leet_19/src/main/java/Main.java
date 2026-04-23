@@ -9,8 +9,10 @@ public class Main {
         ListNode node_2 = new ListNode(2, node_3);
         ListNode node_1 = new ListNode(1, node_2);
 
+        ListNode only = new ListNode(1);
 
-        int n = 4;
-        ListNode head = solution.removeNthFromEnd(node_1, n);
+
+        int n = 1;
+        ListNode head = solution.removeNthFromEnd(only, n);
     }
 }
