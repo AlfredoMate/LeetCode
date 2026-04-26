@@ -15,7 +15,7 @@ public class Main {
         Solution solution = new Solution();
 
 
-        solution.mergeTwoLists(null, new ListNode(0));
+        solution.mergeTwoLists(listNode11, listNode21);
 
     }
 }
