@@ -12,4 +12,22 @@ class Solution {
         }
         return max_profit;
     }
+
+    public int maxProfitTwoPointers(int[] prices) {
+        int right = 1, left = 0;
+        int max_profit = 0;
+
+        while (right < prices.length) {
+            if (prices[left] < prices[right]) {
+
+                max_profit = Math.max(max_profit, prices[right] - prices[left]);
+                right++;
+            } else {
+                left = right;
+                right++;
+            }
+        }
+        return max_profit;
+
+    }
 }
