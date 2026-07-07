@@ -1,0 +1,19 @@
+import java.lang.Math;
+
+class Solution {
+
+
+	public int timeRequiredToBuy(int[] tickets, int k) {
+		int time = 0;
+		for (int i = 0; i < tickets.length; i++) {
+			if (i <= k) {
+				time = time + Math.min(tickets[i], tickets[k]);
+				System.out.println("Time: " + time);
+			} else {
+				time = time + Math.min(tickets[i], tickets[k] - 1);
+				System.out.println("Time: " + time);
+			}	
+		}
+		return time;	
+	}
+}
