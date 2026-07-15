@@ -1,6 +1,6 @@
 Solution: Given the root of 2 binary trees, check if they are identical
 
-Problem: We traverse both binary tree using BFS (recursive approach)
+Problem: We traverse both binary tree using DFS (recursive approach)
 
 At any given node, 3 conditions must be true for both trees to be identical:
 
